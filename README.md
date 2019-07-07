@@ -1,2 +1,9 @@
-# python_qa_otus
-This code is to assist python qa automation course
+# Введение в PyTest
+
+1) Введение в pytest
+2) Начало работы с фикстурами
+3) Scope и Autouse у фикстур
+4) Объект request, finalizer
+5) Возвращение значений из фикстур
+6) Введение в параметризацию
+7) Обзор структур данных
