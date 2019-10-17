@@ -11,9 +11,13 @@
 ## Полезная информация
 
 Документация: https://docs.pytest.org/en/latest/contents.html
+
 Репозиторий: https://github.com/pytest-dev/pytest
 
 ```--setup-show``` - показывает весь процесс запуска и работы pytest
+
 ```-s``` - показать print'ы при выполнении кода pytest
+
 ```-v --verbose``` - показать подробный вывод тестового прогона
+
 ```--fixtures``` - показать доступные фикстуры
