@@ -31,3 +31,4 @@ def test_isdisjoint_set(fixture_set):
 def test_pop_set(fixture_set):
 	fixture_set.pop()
 	assert len(fixture_set) == 6
+
