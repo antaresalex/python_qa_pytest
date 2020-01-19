@@ -1,11 +1,5 @@
 import pytest
 
-#Создаем список для тестирования
-#Получаем список длинной 5
-@pytest.fixture
-def fixture_someone_list():
-	return [1, 4, 3, 2, 5]
-
 #Тестируем метод remove у list
 #Получаем на вход список длинной 5
 def test_remove_element(fixture_someone_list):
@@ -17,12 +11,6 @@ def test_remove_element(fixture_someone_list):
 def test_append_element(fixture_someone_list):
 	fixture_someone_list.append(7)
 	assert len(fixture_someone_list) == 6
-
-#Тестируем метод clear у list
-#Получаем на вход список длинной 5
-def test_clear_element(fixture_someone_list):
-	fixture_someone_list.clear()
-	assert len(fixture_someone_list) == 0
 
 #Тестируем метод count у list
 #Получаем на вход список длинной 5
@@ -42,4 +30,10 @@ def test_sort_element(fixture_someone_list):
 	assert fixture_someone_list.index(min_number) == 0
 	assert fixture_someone_list.index(max_number) == 4
 
-
+#Тестируем метод c параметризацией
+#Тестируем метод clear у list
+#Получаем на вход список длинной 5 и добавляем разные значения до очистки
+def test_clear_element(fixture_someone_list, fixture_with_params):
+	fixture_someone_list.append(fixture_with_params)
+	fixture_someone_list.clear()
+	assert len(fixture_someone_list) == 0
