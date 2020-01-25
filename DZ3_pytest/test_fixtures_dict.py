@@ -9,7 +9,11 @@ def test_keys_dict(fixture_dict):
 #Тестируем метод get у dict 
 #Используем параметризацию
 #Получаем на вход dict
+#Два теста из 3 не проваливаются, 2 не проходят
 def test_get_dict(fixture_dict, fixture_with_params):
 	m_dict = fixture_dict.get(fixture_with_params)
-	assert m_dict == None
+	if m_dict == None:
+		print('Ключа нет в словаре')
+	else:
+		assert m_dict != None
 

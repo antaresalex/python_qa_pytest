@@ -6,7 +6,7 @@ import pytest
 def fixture_someone_list():
 	return [1, 4, 3, 2, 5]
 
-@pytest.fixture(params=[1, 4, 2, 6])
+@pytest.fixture(params=[1, 4, 2, 6, 7, 20, 5])
 def fixture_with_params(request):
     return request.param
 
