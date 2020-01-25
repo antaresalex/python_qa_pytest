@@ -21,14 +21,17 @@ def test_count_element(fixture_someone_list):
 	count_number = fixture_someone_list.count(2)
 	assert count_number == 2
 
+#Тестируем метод c параметризацией
 #Тестируем метод sort у list
 #Получаем на вход список длинной 5
-def test_sort_element(fixture_someone_list):
+@pytest.mark.parametrize('x', [1, 4, 9, 7])
+def test_sort_element(fixture_someone_list, x):
+	fixture_someone_list.append(x)
 	fixture_someone_list.sort()
 	min_number = min(fixture_someone_list)
 	max_number = max(fixture_someone_list)
 	assert fixture_someone_list.index(min_number) == 0
-	assert fixture_someone_list.index(max_number) == 4
+	assert fixture_someone_list.index(max_number) == 5
 
 #Тестируем метод c параметризацией
 #Тестируем метод clear у list
