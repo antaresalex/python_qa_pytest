@@ -17,3 +17,13 @@ def test_get_dict(fixture_dict, fixture_with_params):
 	else:
 		assert m_dict != None
 
+#Тестируем метод copy у dict 
+def test_copy_dict(fixture_dict):
+	copy_dict = fixture_dict.copy()
+	assert copy_dict == fixture_dict
+
+#Тестируем метод clear у dict 
+def test_clear_dict(fixture_dict):
+	fixture_dict.clear()
+	assert len(fixture_dict) == 0
+
